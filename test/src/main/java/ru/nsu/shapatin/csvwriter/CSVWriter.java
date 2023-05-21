@@ -13,7 +13,7 @@ public class CSVWriter {
         String csvFilePath = Paths.get(resourcesPath, "word_frequencies.csv").toString();
 
         try (FileWriter writer = new FileWriter(csvFilePath)) {
-            StringBuilder csvContent = new StringBuilder("Word,Frequency,Frequency (%)\n");
+            StringBuilder csvContent = new StringBuilder("Word\tFrequency\tFrequency (%)\n");
 
             int totalWords = wordFrequencyList.stream()
                     .mapToInt(WordFrequency::frequency)
@@ -22,9 +22,9 @@ public class CSVWriter {
             for (WordFrequency wordFrequency : wordFrequencyList) {
                 double frequencyPercentage = (double) wordFrequency.frequency() * 100 / totalWords;
                 csvContent.append(wordFrequency.word())
-                        .append(",")
+                        .append("\t")
                         .append(wordFrequency.frequency())
-                        .append(",")
+                        .append("\t")
                         .append(String.format("%.2f", frequencyPercentage))
                         .append("%\n");
             }
