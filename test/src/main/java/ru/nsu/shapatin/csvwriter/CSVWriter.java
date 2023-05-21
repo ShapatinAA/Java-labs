@@ -4,6 +4,8 @@ import ru.nsu.shapatin.wordfrequency.WordFrequency;
 
 import java.io.*;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.*;
 
 public class CSVWriter {
@@ -13,19 +15,23 @@ public class CSVWriter {
         String csvFilePath = Paths.get(resourcesPath, "word_frequencies.csv").toString();
 
         try (FileWriter writer = new FileWriter(csvFilePath)) {
-            StringBuilder csvContent = new StringBuilder("Word\tFrequency\tFrequency (%)\n");
+            StringBuilder csvContent = new StringBuilder("Word,Frequency,Frequency (%)\n");
 
             int totalWords = wordFrequencyList.stream()
                     .mapToInt(WordFrequency::frequency)
                     .sum();
 
+            DecimalFormat decimalFormat = new DecimalFormat("#0.00",
+                    DecimalFormatSymbols.getInstance(Locale.US));
+
+
             for (WordFrequency wordFrequency : wordFrequencyList) {
                 double frequencyPercentage = (double) wordFrequency.frequency() * 100 / totalWords;
                 csvContent.append(wordFrequency.word())
-                        .append("\t")
+                        .append(",")
                         .append(wordFrequency.frequency())
-                        .append("\t")
-                        .append(String.format("%.2f", frequencyPercentage))
+                        .append(",")
+                        .append(decimalFormat.format(frequencyPercentage))
                         .append("%\n");
             }
 
