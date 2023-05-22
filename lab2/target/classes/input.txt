@@ -1,0 +1,13 @@
+DEFINE a 4
+PUSH a
+PUSH 4
++
+SQRT
+SQRT
+PUSH 3
+-
+PUSH 2
+/
+PUSH 3
+*
+PRINT
