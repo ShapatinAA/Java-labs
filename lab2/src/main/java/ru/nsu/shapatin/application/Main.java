@@ -19,7 +19,7 @@ public class Main {
         final Path resourcesPath = Paths.get(projectPath, "src", "main", "resources");
         final String logFilePath = Paths.get(resourcesPath.toString(), "CalculatorLog.log").toString();
         try {
-            fh = new FileHandler(logFilePath, true); // The second argument 'true' indicates the file will be appended to, rather than overwritten
+            fh = new FileHandler(logFilePath, false); // The second argument 'true' indicates the file will be appended to, rather than overwritten
             logger.addHandler(fh);
             SimpleFormatter formatter = new SimpleFormatter();
             fh.setFormatter(formatter);

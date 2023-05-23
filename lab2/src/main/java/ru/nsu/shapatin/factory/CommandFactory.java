@@ -39,7 +39,7 @@ public class CommandFactory {
         Class<? extends Command> commandClass = commandMap.get(commandName);
         if (commandClass != null) {
             try {
-                logger.info("Getting " + commandName + " new instance.");
+                logger.info("Making new instance of \t" + commandName + "\n");
                 return commandClass.newInstance();
             } catch (InstantiationException | IllegalAccessException e) {
                 logger.severe("Exception occurred in getting new Instance of " + commandName + " command");

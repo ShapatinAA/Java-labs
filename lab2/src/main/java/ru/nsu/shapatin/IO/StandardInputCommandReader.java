@@ -21,6 +21,12 @@ public class StandardInputCommandReader {
         try (Scanner scanner = new Scanner(System.in)) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine().trim();
+
+                if (line.equalsIgnoreCase("EXIT")) {
+                    // Stop reading when "EXIT" is entered
+                    break;
+                }
+
                 if (line.isEmpty() || line.startsWith("#")) {
                     // Skip empty lines and comments
                     continue;
@@ -30,7 +36,6 @@ public class StandardInputCommandReader {
                 String argument = parts.length > 1 ? parts[1] : null;
 
                 Command command = commandFactory.getCommand(commandName);
-                logger.info("Begin execution of commands from stdin.");
                 command.execute(context, argument != null ? Arrays.asList(argument.split(" ")) : Collections.emptyList());
             }
         } catch (Exception e) {

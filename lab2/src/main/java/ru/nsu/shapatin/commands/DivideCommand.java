@@ -20,7 +20,7 @@ public class DivideCommand implements Command {
             logger.warning("Failed to perform division: Cannot divide by zero.");
             throw new CommandException("Cannot divide by zero");
         }
-        Double result = val1 / val2;
+        Double result = val2 / val1;
         context.stack.push(result);
         logger.info("Performed division: " + val2 + " / " + val1 + " = " + result);
     }

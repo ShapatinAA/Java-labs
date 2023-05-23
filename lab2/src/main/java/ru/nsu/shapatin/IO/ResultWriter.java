@@ -10,7 +10,7 @@ public class ResultWriter {
 
     public void writeResult(Context context, String filename) throws IOException {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false));
             double result = context.stack.peek();  // get the top element from stack, which is the result
             writer.write("Result: " + result + "\n");
             writer.close();

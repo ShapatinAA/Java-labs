@@ -16,7 +16,7 @@ public class MultiplyCommand implements Command {
         }
         Double val1 = context.stack.pop();
         Double val2 = context.stack.pop();
-        Double result = val1 * val2;
+        Double result = val2 * val1;
         context.stack.push(result);
         logger.info("Performed multiplication: " + val2 + " * " + val1 + " = " + result);
     }

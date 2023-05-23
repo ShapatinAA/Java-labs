@@ -1,350 +1,49 @@
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:27:40 AM ru.nsu.shapatin.factory.CommandFactory <init>
+мая 23, 2023 6:43:38 AM ru.nsu.shapatin.factory.CommandFactory <init>
 INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:27:49 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:27:49 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:27:53 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:28:03 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:28:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:28:29 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:28:38 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:28:39 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 2.0 is now printed to specified file.
-мая 23, 2023 5:28:50 AM ru.nsu.shapatin.application.Main main
-SEVERE: Exit the program.
-мая 23, 2023 5:28:50 AM ru.nsu.shapatin.application.Main main
-SEVERE: Exit the program.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 2.0 is now printed to specified file.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.application.Main main
-SEVERE: Exit the program.
-мая 23, 2023 5:29:50 AM ru.nsu.shapatin.application.Main main
-SEVERE: Exit the program.
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:30:52 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:30:56 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:30:56 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:30:56 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 2.0 is now printed to specified file.
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:30:59 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 2.0 is now printed to specified file.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:31:05 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:31:29 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:31:31 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 2.0 is now printed to specified file.
-мая 23, 2023 5:31:38 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:31:38 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 2.0 is now printed to specified file.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.IO.ResultWriter writeResult
-INFO: The result has been written to D:\Proga\lab2\src\main\resources\result.txt
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:31:55 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(4.0) = 2.0
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(2.0) = 1.4142135623730951
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PRINT new instance.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.commands.PrintCommand execute
-INFO: Performed PRINT command: 1.4142135623730951 is now printed to specified file.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.IO.ResultWriter writeResult
-INFO: The result has been written to D:\Proga\lab2\src\main\resources\result.txt
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:32:17 AM ru.nsu.shapatin.application.Main main
-INFO: Exit the program.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command POP with class ru.nsu.shapatin.commands.PopCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PRINT with class ru.nsu.shapatin.commands.PrintCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command SQRT with class ru.nsu.shapatin.commands.SqrtCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command * with class ru.nsu.shapatin.commands.MultiplyCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command + with class ru.nsu.shapatin.commands.AddCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command - with class ru.nsu.shapatin.commands.SubtractCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command DEFINE with class ru.nsu.shapatin.commands.DefineCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command PUSH with class ru.nsu.shapatin.commands.PushCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory <init>
-INFO: Loaded command / with class ru.nsu.shapatin.commands.DivideCommand
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting DEFINE new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.DefineCommand execute
-INFO: Performed DEFINE command: a is now bound to 4.0
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command of variable a (4.0) onto the stack
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.PushCommand execute
+мая 23, 2023 6:43:40 AM ru.nsu.shapatin.factory.CommandFactory getCommand
+INFO: Making new instance of 	PUSH
+
+мая 23, 2023 6:43:40 AM ru.nsu.shapatin.commands.PushCommand execute
 INFO: Performed PUSH command: 4.0 is now on stack.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting + new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.AddCommand execute
-INFO: Performed addition: 4.0 + 4.0 = 8.0
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(8.0) = 2.8284271247461903
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting SQRT new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.SqrtCommand execute
-INFO: Calculated square root: SQRT(2.8284271247461903) = 1.6817928305074292
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command: 3.0 is now on stack.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting - new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.SubtractCommand execute
-INFO: Performed subtraction: 1.6817928305074292 - 3.0 = 1.3182071694925708
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.PushCommand execute
+мая 23, 2023 6:43:42 AM ru.nsu.shapatin.factory.CommandFactory getCommand
+INFO: Making new instance of 	PUSH
+
+мая 23, 2023 6:43:42 AM ru.nsu.shapatin.commands.PushCommand execute
 INFO: Performed PUSH command: 2.0 is now on stack.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting / new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.DivideCommand execute
-INFO: Performed division: 1.3182071694925708 / 2.0 = 1.5172122002415431
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting PUSH new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.PushCommand execute
-INFO: Performed PUSH command: 3.0 is now on stack.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-INFO: Getting * new instance.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.commands.MultiplyCommand execute
-INFO: Performed multiplication: 1.5172122002415431 * 3.0 = 4.551636600724629
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.factory.CommandFactory getCommand
-WARNING: Unknown command: 2
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.IO.FileCommandReader processFile
-SEVERE: Error processing command.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.IO.FileCommandReader processFile
-SEVERE: Error processing command.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.application.Main main
-SEVERE: Exit the program.
-мая 23, 2023 5:34:17 AM ru.nsu.shapatin.application.Main main
-SEVERE: Exit the program.
+мая 23, 2023 6:43:46 AM ru.nsu.shapatin.factory.CommandFactory getCommand
+INFO: Making new instance of 	+
+
+мая 23, 2023 6:43:46 AM ru.nsu.shapatin.commands.AddCommand execute
+INFO: Performed addition: 4.0 + 2.0 = 6.0
+мая 23, 2023 6:43:48 AM ru.nsu.shapatin.factory.CommandFactory getCommand
+INFO: Making new instance of 	SQRT
+
+мая 23, 2023 6:43:48 AM ru.nsu.shapatin.commands.SqrtCommand execute
+INFO: Calculated square root: SQRT(6.0) = 2.449489742783178
+мая 23, 2023 6:43:50 AM ru.nsu.shapatin.factory.CommandFactory getCommand
+INFO: Making new instance of 	PRINT
+
+мая 23, 2023 6:43:50 AM ru.nsu.shapatin.commands.PrintCommand execute
+INFO: Performed PRINT command: 2.449489742783178 is now printed to specified file.
+мая 23, 2023 6:43:52 AM ru.nsu.shapatin.IO.ResultWriter writeResult
+INFO: The result has been written to D:\Proga\lab2\src\main\resources\result.txt
+мая 23, 2023 6:43:53 AM ru.nsu.shapatin.application.Main main
+INFO: Exit the program.
+мая 23, 2023 6:43:53 AM ru.nsu.shapatin.application.Main main
+INFO: Exit the program.
