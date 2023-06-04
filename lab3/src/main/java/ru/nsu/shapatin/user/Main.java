@@ -1,9 +1,9 @@
 package ru.nsu.shapatin.user;
 
-import ru.nsu.shapatin.controller.*;
-import ru.nsu.shapatin.model.*;
+import ru.nsu.shapatin.controller.GameController;
+import ru.nsu.shapatin.model.Game;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
         public static void main(String[] args) {

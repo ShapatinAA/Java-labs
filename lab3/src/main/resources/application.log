@@ -1,0 +1,9 @@
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.model.HighScoreTable - New instance of HighScore table created.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.model.HighScoreTable - Loading HighScore table form file.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.model.Game - New instance of Game created.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.view.TextView - New instance of TextView created.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.controller.GameController - Instance of GameController is created.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.model.Game - New game is started. Making layout (mines, etc).
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.model.Game - Set mine to x=0; y=0.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.view.TextView - Starting new game in text.
+2023-06-01 04:19:18 [main] INFO  ru.nsu.shapatin.view.TextView - handling input text command.

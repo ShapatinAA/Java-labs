@@ -1,12 +1,19 @@
 package ru.nsu.shapatin.model;
 
+import org.apache.logging.log4j.*;
+
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class HighScoreTable {
     private List<HighScoreEntry> entries;
+    private static Logger logger = LogManager.getLogger(HighScoreTable.class);
 
     public HighScoreTable() {
         entries = new ArrayList<>();
+        logger.info("New instance of HighScore table created.");
     }
 
     public void addEntry(HighScoreEntry entry) {
@@ -20,6 +27,7 @@ public class HighScoreTable {
         return entries;
     }
     public void loadFromFile() {
+        logger.info("Loading HighScore table form file.");
         try (BufferedReader reader = new BufferedReader(new FileReader("./src/main/resources/HighScore.dat"))) {
             String line;
             this.entries.clear(); // очищаем текущую таблицу
@@ -38,6 +46,7 @@ public class HighScoreTable {
         }
     }
     public void saveToFile() {
+        logger.info("Saving HighScore table to file.");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("./src/main/resources/HighScore.dat"))) {
             for (HighScoreEntry entry : this.entries) {
                 // Запись в файл в виде: Имя игрока,Счет

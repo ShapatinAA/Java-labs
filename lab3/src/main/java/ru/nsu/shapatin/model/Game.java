@@ -1,21 +1,22 @@
 package ru.nsu.shapatin.model;
 
-import ru.nsu.shapatin.model.Cell;
-import ru.nsu.shapatin.model.HighScoreTable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.awt.Point;
-import java.time.*;
+import java.awt.*;
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Game {
     private Cell[][] grid;
     private int mineCount;
     private int flagCount;
-    private Instant startTime;
-    private Instant endTime;
+    private Thread timeCounterThread;
+    private TimeCounter timeCounter;
     private String playerName;
     private int uncoveredCount;
     private HighScoreTable highScoreTable;
+    private static Logger logger = LogManager.getLogger(Game.class.getName());
 
     public Game(String playerName, int width, int height, int mineCount) {
         this.grid = new Cell[width][height];
@@ -31,10 +32,8 @@ public class Game {
                 this.grid[x][y] = new Cell();
             }
         }
-
+        logger.info("New instance of Game created.");
     }
-
-    // Reveal a cell
 
     public int getWidth() {
         return grid.length;
@@ -44,30 +43,25 @@ public class Game {
         return grid[0].length;
     }
 
-    public void startTime() {
-        startTime = Instant.now();
-    }
-
-    // вызывается, когда игра заканчивается
-    public void endTime() {
-        endTime = Instant.now();
-    }
-
     public Cell getCell(Point point) {
         return grid[point.x][point.y];
     }
 
     public HighScoreTable getHighScoreTable() {
+        logger.info("Get High Score table.");
         return highScoreTable;
     }
 
     public void updateHighScores(String playerName, int score) {
+        logger.info("HighScores table start update.");
         HighScoreEntry newEntry = new HighScoreEntry(playerName, score);
         highScoreTable.addEntry(newEntry);
         highScoreTable.saveToFile();
+        logger.info("HighScores table updated.");
     }
 
     public void startNewGame() {
+        logger.info("New game is started. Making layout (mines, etc).");
         this.flagCount = 0;
 
         // Очистка поля
@@ -85,6 +79,7 @@ public class Game {
                 x = random.nextInt(grid.length);
                 y = random.nextInt(grid[0].length);
             } while (grid[x][y].isMine());
+            logger.info("Set mine to x=" + x + "; y=" + y + ".");
             grid[x][y].setMine(true);
         }
 
@@ -99,7 +94,21 @@ public class Game {
         }
 
         // Запуск таймера для новой игры
-        startTime();
+        if (timeCounterThread != null) {
+            timeCounter.stop();
+            try {
+                timeCounterThread.join(); // ожидаем завершения потока
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                logger.fatal("Thread was interrupted");
+                throw new RuntimeException(e);
+            }
+        }
+
+        // Запуск таймера для новой игры
+        timeCounter = new TimeCounter();
+        timeCounterThread = new Thread(timeCounter);
+        timeCounterThread.start();
     }
 
     private int countAdjacentMines(int x, int y) {
@@ -123,21 +132,66 @@ public class Game {
         return mineCount;
     }
 
+    private class TimeCounter implements Runnable {
+        private final AtomicLong timeInSeconds = new AtomicLong();
+        private volatile boolean isRunning = true;
+
+        public void stop() {
+            isRunning = false;
+        }
+
+        public long getTime() {
+            return timeInSeconds.get();
+        }
+
+        @Override
+        public void run() {
+            while (isRunning) {
+                // Обновляем время каждую секунду
+                timeInSeconds.incrementAndGet();
+
+                try {
+                    Thread.sleep(1000); // Задержка в 1 секунду
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    logger.fatal("Thread was interrupted");
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+    }
+
     public int getScore() {
-        endTime();
-        if (startTime == null || endTime == null) {
+        logger.info("Getting score of this play.");
+        if (timeCounter == null) {
             return 0;
         }
 
-        Duration timeSpent = Duration.between(startTime, endTime);
+        int timeSpent = (int) timeCounter.getTime();
 
-        int score = (int) (1000 - timeSpent.getSeconds());
+        int score = 1000 - timeSpent;
+
+        stopTimeThread();
 
         // гарантировать, что счет не станет отрицательным
         return Math.max(score, 0);
     }
 
-    public void setFlagged(Cell cell) {
+    public void stopTimeThread() {
+        timeCounter.stop();
+        try {
+            timeCounterThread.join(); // ожидаем завершения потока
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            logger.fatal("Thread was interrupted");
+            throw new RuntimeException(e);
+        }
+        timeCounterThread = null;
+        timeCounter = null;
+    }
+
+    public void setFlagged(Cell cell, Point point) {
+        logger.info("Flag cell x=" + point.x + "; y=" + point.y + ". This cell was" + cell.getState() + ".");
         Boolean b = !cell.isFlagged();
         cell.setFlagged(b);
         if (b) {
@@ -149,6 +203,7 @@ public class Game {
     }
 
     public void setRevealed(Point point, Cell cell) {
+        logger.info("Reveal cell x=" + point.x + "; y=" + point.y + ".");
         // Проверяем, была ли ячейка уже открыта
         if (cell.isRevealed()) {
             return;
@@ -197,5 +252,4 @@ public class Game {
         return playerName;
     }
 
-    // ... other game logic omitted for brevity
 }

@@ -1,29 +1,36 @@
 package ru.nsu.shapatin.view;
 
-import ru.nsu.shapatin.controller.*;
+import org.apache.logging.log4j.*;
+import ru.nsu.shapatin.controller.GameController;
 import ru.nsu.shapatin.model.*;
+
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.util.*;
+import java.util.Scanner;
 
 public class TextView implements View {
     private Game game;
     private GameController gameController;
     private Scanner scanner;
 
+    private static Logger logger = LogManager.getLogger(TextView.class.getName());
+
     public TextView(Game game, GameController gameController) {
         this.game = game;
         this.gameController = gameController;
         this.scanner = new Scanner(System.in);
+        logger.info("New instance of TextView created.");
     }
 
     @Override
     public void startNewGame() {
+        logger.info("Starting new game in text.");
         System.out.println("A new game has started.");
         handleInput();
     }
     private void handleInput() {
+        logger.info("handling input text command.");
         while (gameController.isRunning(true)) {
             System.out.print("Enter your command: ");
             String input = scanner.nextLine();
@@ -65,6 +72,7 @@ public class TextView implements View {
     }
     @Override
     public void render() {
+        logger.info("Rendering text game.");
         Cell[][] cells = game.getCells();
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells[i].length; j++) {
@@ -88,6 +96,7 @@ public class TextView implements View {
     }
     @Override
     public void displayHighScores() {
+        logger.info("Displaying HighScores in text game.");
         HighScoreTable highScores = game.getHighScoreTable();
 
         // Создание строки с заголовками
@@ -102,6 +111,7 @@ public class TextView implements View {
     }
     @Override
     public void displayAbout() {
+        logger.info("Displaying about in text game.");
         String aboutText = "Minesweeper\n\n" +
                 "Minesweeper is a classic puzzle game where the player\n" +
                 "needs to uncover all the cells on the grid without\n" +
@@ -112,10 +122,12 @@ public class TextView implements View {
     }
     @Override
     public void exitGame() {
+        logger.info("Exiting text game.");
         System.out.close();
     }
     @Override
     public void displayWin(int score) {
+        logger.info("You won text game.");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Поздравляем! Вы выиграли!\nВаш счет: " + score);
         System.out.println("1. Новая игра\n2. Выход");
@@ -124,12 +136,15 @@ public class TextView implements View {
 
         switch (option) {
             case 1:
+                logger.info("Option 1 chosen - start of new text game.");
                 gameController.startNewGame();
                 break;
             case 2:
+                logger.info("Option 2 chosen - end of text game.");
                 gameController.exitGame();
                 break;
             default:
+                logger.info("Wrong command inputted in text game.");
                 System.out.println("Недопустимая опция. Повторите попытку.");
                 displayWin(score); // Вызов метода снова, если введенная опция недействительна
                 break;
@@ -137,6 +152,7 @@ public class TextView implements View {
     }
     @Override
     public void displayLose(int score) {
+        logger.info("You lost text game.");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Вы проиграли.\nВаш счет: " + score);
         System.out.println("1. Новая игра\n2. Выход");
@@ -145,12 +161,15 @@ public class TextView implements View {
 
         switch (option) {
             case 1:
+                logger.info("Option 1 chosen - start of new text game.");
                 gameController.startNewGame();
                 break;
             case 2:
+                logger.info("Option 2 chosen - end of text game.");
                 gameController.exitGame();
                 break;
             default:
+                logger.info("Wrong command inputted in text game.");
                 System.out.println("Недопустимая опция. Повторите попытку.");
                 displayLose(score); // Вызов метода снова, если введенная опция недействительна
                 break;
